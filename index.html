@@ -10,10 +10,28 @@
   </head>
 
   <body>
-    <div id="calc_space">
-      <textarea name="input_text" id="" cols="30" rows="10"></textarea>
-      <textarea name="output_text" id="" cols="30" rows="10"></textarea>
+    <div id="command_button">
+      <input type="checkbox" id="about_import" />
+      引用括弧をコードブロックで囲む。
     </div>
-    <div id="out_space"></div>
+    <div id="calc_space">
+      <textarea
+        name="input_text"
+        id="input_text"
+        cols="50"
+        rows="10"
+        onkeyup="calcTextAreaData(value)"
+      ></textarea>
+      <textarea
+        name="output_text"
+        id="output_text"
+        cols="50"
+        rows="10"
+        readonly
+      ></textarea>
+    </div>
+    <div id="out_space">
+      <p id="length">文字数 : 0 字</p>
+    </div>
   </body>
 </html>
