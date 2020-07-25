@@ -10,18 +10,22 @@
   </head>
 
   <body>
+    <div id="command_button">
+      <input type="checkbox" id="about_import" />
+      引用括弧をコードブロックで囲む。
+    </div>
     <div id="calc_space">
       <textarea
         name="input_text"
         id="input_text"
-        cols="30"
+        cols="50"
         rows="10"
         onkeyup="calcTextAreaData(value)"
       ></textarea>
       <textarea
         name="output_text"
         id="output_text"
-        cols="30"
+        cols="50"
         rows="10"
         readonly
       ></textarea>

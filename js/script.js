@@ -6,9 +6,19 @@ onKeyUp()時に、textArea の値を取得
  */
 
 function calcTextAreaData(value) {
+  // 文字数を計測して出力する。
   const textLength = value.length;
   document.getElementById("length").innerHTML =
     "文字数 : " + textLength + " 字";
 
-  document.getElementById("output_text").innerHTML = value;
+  // []があればコードブロックで囲む。
+  const isImport = document.getElementById("about_import").value;
+  if (isImport) {
+    const start = new RegExp(/\[/, "g");
+    const end = new RegExp(/\]/, "g");
+
+    const startReplaced = value.replace(start, "`[");
+    const result = startReplaced.replace(end, "]`");
+    document.getElementById("output_text").innerHTML = result;
+  }
 }
