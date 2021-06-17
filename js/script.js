@@ -22,3 +22,12 @@ function calcTextAreaData(value) {
     document.getElementById("output_text").innerHTML = result;
   }
 }
+
+function clearText() {
+  const text_in = document.getElementById("input_text");
+
+  if (text_in.value != "") {
+    text_in.value = "";
+    calcTextAreaData("");
+  }
+}
